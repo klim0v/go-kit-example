@@ -1,0 +1,10 @@
+###
+GET http://localhost:8081/sum
+Content-Type: application/json
+
+{
+  "a": 1,
+  "b": 2
+}
+
+###

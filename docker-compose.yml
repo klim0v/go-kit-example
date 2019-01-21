@@ -1,0 +1,13 @@
+version: "2"
+services:
+  adder:
+    build:
+      context: .
+      dockerfile: adder/Dockerfile
+    restart: always
+    volumes:
+    - .:/go/src/github.com/klim0v/go-kit-example
+    container_name: adder
+    ports:
+    - 8800:8081
+    - 8801:8082

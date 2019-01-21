@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package pb;
+
+
+//The Adder service definition.
+service Adder {
+ rpc Sum (SumRequest) returns (SumReply);
+}
+
+message SumRequest {}
+
+message SumReply {}
+
