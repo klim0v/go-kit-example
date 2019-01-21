@@ -8,3 +8,12 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:8081/sum
+Content-Type: application/json
+
+{
+  "a": 55,
+  "b": 43
+}
+
+###

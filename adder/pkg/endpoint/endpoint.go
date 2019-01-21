@@ -9,13 +9,13 @@ import (
 
 // SumRequest collects the request parameters for the Sum method.
 type SumRequest struct {
-	A int `json:"a"`
-	B int `json:"b"`
+	A int32 `json:"a"`
+	B int32 `json:"b"`
 }
 
 // SumResponse collects the response parameters for the Sum method.
 type SumResponse struct {
-	Rs  int   `json:"rs"`
+	Rs  int32 `json:"rs"`
 	Err error `json:"err"`
 }
 
@@ -44,7 +44,7 @@ type Failure interface {
 }
 
 // Sum implements Service. Primarily useful in a client.
-func (e Endpoints) Sum(ctx context.Context, a int, b int) (rs int, err error) {
+func (e Endpoints) Sum(ctx context.Context, a int32, b int32) (rs int32, err error) {
 	request := SumRequest{
 		A: a,
 		B: b,

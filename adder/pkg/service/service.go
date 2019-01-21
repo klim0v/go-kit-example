@@ -5,13 +5,13 @@ import "context"
 // AdderService describes the service.
 type AdderService interface {
 	// Add your methods here
-	Sum(ctx context.Context, a, b int) (rs int, err error)
+	Sum(ctx context.Context, a, b int32) (rs int32, err error)
 }
 
 type basicAdderService struct{}
 
-func (ba *basicAdderService) Sum(ctx context.Context, a int, b int) (rs int, err error) {
-	// TODO implement the business logic of Sum
+func (ba *basicAdderService) Sum(ctx context.Context, a int32, b int32) (rs int32, err error) {
+	rs = a + b
 	return rs, err
 }
 

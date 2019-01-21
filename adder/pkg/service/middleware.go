@@ -23,7 +23,7 @@ func LoggingMiddleware(logger log.Logger) Middleware {
 
 }
 
-func (l loggingMiddleware) Sum(ctx context.Context, a int, b int) (rs int, err error) {
+func (l loggingMiddleware) Sum(ctx context.Context, a int32, b int32) (rs int32, err error) {
 	defer func() {
 		l.logger.Log("method", "Sum", "a", a, "b", b, "rs", rs, "err", err)
 	}()

@@ -2,13 +2,17 @@ syntax = "proto3";
 
 package pb;
 
-
 //The Adder service definition.
 service Adder {
- rpc Sum (SumRequest) returns (SumReply);
+    rpc Sum (SumRequest) returns (SumReply);
 }
 
-message SumRequest {}
+message SumRequest {
+    int32 a = 1;
+    int32 b = 2;
+}
 
-message SumReply {}
+message SumReply {
+    int32 rs = 1;
+}
 
